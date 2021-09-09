@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="XAF_ASPNET_CORE_BLAZOR_TUTORIAL">
+  <ActionDesign>
+    <ActionToContainerMapping>
+      <ActionContainer Id="Edit">
+        <ActionLink ActionId="ClearTaskAction" Index="0" IsNewNode="True" />
+      </ActionContainer>
+      <ActionContainer Id="View">
+        <ActionLink ActionId="ClearTaskAction" Removed="True" />
+      </ActionContainer>
+    </ActionToContainerMapping>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
+  </BOModel>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="21.1.5.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="ApplicationUser_ListView" Caption="Users" />
+    <DetailView Id="Contact_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="55.00667556742323">
+            <LayoutGroup Id="Contact" RelativeSize="39.80582524271845">
+              <LayoutGroup Id="Contact_col1" RelativeSize="49.94082840236686">
+                <LayoutItem Id="WebPageAddress" RelativeSize="29.032258064516128" />
+                <LayoutItem Id="NickName" RelativeSize="20.967741935483872" />
+                <LayoutItem Id="SpouseName" RelativeSize="20.967741935483872" />
+                <LayoutItem Id="TitleOfCourtesy" RelativeSize="29.032258064516128" />
+              </LayoutGroup>
+              <LayoutGroup Id="Contact_col2" RelativeSize="50.05917159763314">
+                <LayoutItem Id="Anniversary" RelativeSize="29.032258064516128" />
+                <LayoutItem Id="Department" RelativeSize="20.967741935483872" />
+                <LayoutItem Id="Position" RelativeSize="20.967741935483872" />
+                <LayoutItem Id="Manager" RelativeSize="29.032258064516128" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Person" RelativeSize="37.37864077669903">
+              <LayoutGroup Id="Person_col1" RelativeSize="49.94082840236686">
+                <LayoutItem Id="FirstName" RelativeSize="29.032258064516128" />
+                <LayoutItem Id="LastName" RelativeSize="20.967741935483872" />
+                <LayoutItem Id="MiddleName" RelativeSize="50" />
+              </LayoutGroup>
+              <LayoutGroup Id="Person_col2" RelativeSize="50.05917159763314">
+                <LayoutItem Id="DisplayName" ViewItem="DisplayName" Index="0" RelativeSize="29.032258064516128" IsNewNode="True" />
+                <LayoutItem Id="Birthday" Index="1" RelativeSize="20.967741935483872" />
+                <LayoutItem Id="FullName" Index="2" RelativeSize="20.967741935483872" />
+                <LayoutItem Id="Email" Index="3" RelativeSize="29.032258064516128" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Party" RelativeSize="22.815533980582526">
+              <LayoutItem Id="Photo" RelativeSize="36.170212765957444" />
+              <LayoutItem Id="Address1" RelativeSize="27.659574468085108" />
+              <LayoutItem Id="Address2" RelativeSize="36.170212765957444" />
+              <LayoutItem Id="DisplayName" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="22.429906542056074">
+            <LayoutItem Id="Notes" RelativeSize="100" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="22.563417890520693">
+            <LayoutGroup Id="Tasks" RelativeSize="100" Index="0">
+              <LayoutItem Id="Tasks" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="PhoneNumbers" RelativeSize="100" Index="1">
+              <LayoutItem Id="PhoneNumbers" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DemoTask_ListView">
+      <Columns>
+        <ColumnInfo Id="Priority" Width="81" />
+        <ColumnInfo Id="DueDate" Index="2" Width="113" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>
